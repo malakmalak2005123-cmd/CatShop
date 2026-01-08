@@ -1,10 +1,16 @@
 <?php
+// Use Railway environment variables
+$host = $_ENV['MYSQLHOST'];       // hostname from Railway
+$port = $_ENV['MYSQLPORT'];       // port number
+$db   = $_ENV['MYSQLDATABASE'];   // database name
+$user = $_ENV['MYSQLUSER'];       // username
+$pass = $_ENV['MYSQLPASSWORD'];   // password
 
-$host = $_ENV['MYSQLHOST'];
-$db   = $_ENV['MYSQLDATABASE'];
-$user = $_ENV['MYSQLUSER'];
-$pass = $_ENV['MYSQLPASSWORD'];
-$port = $_ENV['MYSQLPORT'];
+echo 'host: '.$host;
+echo 'port: '.$port;
+echo 'db: '.$db;
+echo 'user: '.$user;
+echo 'pass: '.$pass;
 
 try {
     $pdo = new PDO(
@@ -17,5 +23,5 @@ try {
         ]
     );
 } catch (PDOException $e) {
-    die("Database error");
+    die("Database error: " . $e->getMessage());
 }
