@@ -245,11 +245,11 @@ td:last-child {
                                     <td style="width: 30%; border: none; padding: 8px;">
                                         <div class="actions-row">
                                             <?php if($status != 'Confirme'): ?>
-                                                <a href="confirmer.php?id=<?= $item['cat_id'] ?>" class="btn-confirm">
+                                                <a href="confirmer.php?id=<?= $item['adoption_id'] ?>" class="btn-confirm">
                                                     ✔ Use
                                                 </a>
                                             <?php else: ?>
-                                                <a href="annuler.php?id=<?= $item['cat_id'] ?>" class="btn-cancel" onclick="return confirm('Cancel reservation?');">
+                                                <a href="annuler.php?id=<?= $item['adoption_id'] ?>" class="btn-cancel" onclick="return confirm('Cancel reservation?');">
                                                     ↺ Cancel
                                                 </a>
                                             <?php endif; ?>

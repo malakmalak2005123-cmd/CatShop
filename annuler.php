@@ -6,7 +6,7 @@ if(isset($_GET['id'])){
 
     // Annuler la réservation = Revenir au statut "En attente"
     // Cela rendra le produit visible à nouveau sur home.php (car le filtre exclut seulement 'Confirme')
-    $sql = "UPDATE adopted SET status = 'En attente' WHERE cat_id = ?";
+    $sql = "UPDATE adopted SET status = 'En attente' WHERE id = ?";
     $stmt = $pdo->prepare($sql);
     
     if($stmt->execute([$id])){
