@@ -1,4 +1,5 @@
 <?php
+phpinfo();
 // Use Railway environment variables
 $host =$ip = getenv('MYSQLHOST', true) ?: getenv('MYSQLHOST');
 $port = getenv('MYSQLPORT', true) ?: getenv('MYSQLPORT');       // port number
