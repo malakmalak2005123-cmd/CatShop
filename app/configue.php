@@ -1,13 +1,14 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "my_login_db";
+$host = $_ENV['MYSQLHOST'];
+$db   = $_ENV['MYSQLDATABASE'];
+$user = $_ENV['MYSQLUSER'];
+$pass = $_ENV['MYSQLPASSWORD'];
+$port = $_ENV['MYSQLPORT'];
 
 try {
     $pdo = new PDO(
-        "mysql:host=$host;dbname=$dbname;charset=utf8",
+        "mysql:host=$host;port=$port;dbname=$db;charset=utf8mb4",
         $user,
         $pass,
         [
@@ -15,7 +16,6 @@ try {
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]
     );
-
-} catch(PDOException $e){
-    die("Connexion failed : " . $e->getMessage());
+} catch (PDOException $e) {
+    die("Database error");
 }
