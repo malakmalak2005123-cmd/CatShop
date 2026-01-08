@@ -1,10 +1,10 @@
 <?php
 // Use Railway environment variables
-$host = $_ENV['MYSQLHOST'];       // hostname from Railway
-$port = $_ENV['MYSQLPORT'];       // port number
-$db   = $_ENV['MYSQL_DATABASE'];   // database name
-$user = $_ENV['MYSQLUSER'];       // username
-$pass = $_ENV['MYSQLPASSWORD'];   // password
+$host =$ip = getenv('MYSQLHOST', true) ?: getenv('MYSQLHOST');
+$port = getenv('MYSQLPORT', true) ?: getenv('MYSQLPORT');       // port number
+$db   = getenv('MYSQL_DATABASE', true) ?: getenv('MYSQL_DATABASE');   // database name
+$user = getenv('MYSQLUSER', true) ?: getenv('MYSQLUSER');       // username
+$pass = getenv('MYSQLPASSWORD', true) ?: getenv('MYSQLPASSWORD');   // password
 
 echo 'host: '.$host;
 echo 'port: '.$port;
