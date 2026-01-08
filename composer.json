@@ -1,0 +1,12 @@
+{
+    "name": "user/catshop",
+    "description": "CatShop Project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "User",
+            "email": "user@example.com"
+        }
+    ],
+    "require": {}
+}
