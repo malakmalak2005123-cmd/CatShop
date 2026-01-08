@@ -2,7 +2,7 @@
 // Use Railway environment variables
 $host = $_ENV['MYSQLHOST'];       // hostname from Railway
 $port = $_ENV['MYSQLPORT'];       // port number
-$db   = $_ENV['MYSQLDATABASE'];   // database name
+$db   = $_ENV['MYSQL_DATABASE'];   // database name
 $user = $_ENV['MYSQLUSER'];       // username
 $pass = $_ENV['MYSQLPASSWORD'];   // password
 
