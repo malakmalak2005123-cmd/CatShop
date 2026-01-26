@@ -52,7 +52,8 @@ body {
 }
 
 .container {
-    width: 350px;
+    width: 90%;
+    max-width: 350px;
     background: white;
     padding: 25px;
     border-radius: 10px;

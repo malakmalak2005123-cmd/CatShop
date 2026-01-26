@@ -29,6 +29,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <a href="commande.php" class="btn-orders">📦 View orders</a>
 </div>
 
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -65,6 +66,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </tbody>
 </table>
+</div>
 
 </div>
 

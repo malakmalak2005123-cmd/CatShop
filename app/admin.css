@@ -101,7 +101,7 @@ td img {
 
 .actions a:last-child:hover {
     color: #cb2a2a;
-    
+
 }
 
 .separator {
@@ -185,4 +185,20 @@ td img {
     background: #c62828;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(239, 83, 80, 0.3);
+}
+
+/* Responsive Table Wrapper */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure table doesn't shrink too much */
+table {
+    min-width: 600px;
+    /* Force scroll on small screens */
 }
