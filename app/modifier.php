@@ -11,7 +11,7 @@ $stmt->execute(['id' => $id]);
 $row = $stmt->fetch();
 
 if (!$row) {
-    die("Produit introuvable !");
+    die("Product not found!");
 }
 
 // 3) Si le formulaire est soumis → UPDATE
@@ -58,7 +58,7 @@ if ($_POST) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Modifier Produit</title>
+    <title>Edit Product</title>
     <style>
         /* --- Reset basique --- */
         * { margin:0; padding:0; box-sizing:border-box; }
@@ -158,38 +158,38 @@ if ($_POST) {
 </head>
 <body>
 
-<h2>✏ Modifier le produit</h2>
+<h2>✏ Edit Product</h2>
 
 <form method="POST">
 
-    <label>Nom :</label>
+    <label>Name:</label>
     <input type="text" name="name" value="<?php echo htmlspecialchars($row['name']); ?>">
 
-    <label>Type :</label>
+    <label>Type:</label>
     <input type="text" name="type" value="<?php echo htmlspecialchars($row['Type']); ?>">
 
-    <label>Prix :</label>
+    <label>Price:</label>
     <input type="text" name="prix" value="<?php echo htmlspecialchars($row['prix']); ?>">
 
-    <label>Âge :</label>
+    <label>Age:</label>
     <input type="text" name="age" value="<?php echo htmlspecialchars($row['age']); ?>">
 
-    <label>Sexe :</label>
+    <label>Sex:</label>
     <select name="sex">
         <option value="Male"   <?php if($row['sexe']=='Male') echo "selected"; ?>>Male</option>
         <option value="Female" <?php if($row['sexe']=='Female') echo "selected"; ?>>Female</option>
     </select>
 
-    <label>Image (nom fichier) :</label>
+    <label>Image (filename):</label>
     <input type="text" name="image" value="<?php echo htmlspecialchars($row['image']); ?>">
 
-    <label>Description courte :</label>
+    <label>Short Description:</label>
     <textarea name="description_courte"><?php echo htmlspecialchars($row['description_courte']); ?></textarea>
 
-    <label>Caractéristiques :</label>
+    <label>Features:</label>
     <textarea name="caracteristiques"><?php echo htmlspecialchars($row['caracteristiques']); ?></textarea>
 
-    <button type="submit">Modifier</button>
+    <button type="submit">Update</button>
 
 </form>
 
